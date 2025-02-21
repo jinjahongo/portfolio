@@ -97,8 +97,7 @@ nav ul li a:hover::after {
 /* 포트폴리오 썸네일 그리드 */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5개씩 가로 정렬 */
-    grid-template-rows: repeat(2, auto); /* 2행으로 배치 */
+    grid-template-columns: repeat(2, 1fr); /* 2개씩 가로 정렬 */
     gap: 20px;
     padding: 20px;
     max-width: 1920px;

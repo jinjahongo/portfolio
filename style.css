@@ -28,23 +28,38 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* 메뉴 간격 30px */
+    gap: 30px; /* 메뉴 간격 */
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
+    position: relative; /* 밑줄 애니메이션을 위한 상대 위치 설정 */
 }
 
 nav ul li a {
     text-decoration: none;
     color: black;
-    font-size: 14px; /* 폰트 크기 줄이기 */
+    font-size: 14px;
     font-weight: bold;
-    text-transform: uppercase; /* 영문 대문자로 */
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px; /* 글자와 밑줄 사이 여백 */
 }
 
-nav ul li a:hover {
-    text-decoration: underline; /* 마우스 올릴 때 밑줄 효과 */
+/* 밑줄 기본 설정 (초기에는 보이지 않음) */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* 밑줄 두께 */
+    background-color: black;
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* 느렸다가 - 빨랐다가 - 느려지는 효과 */
+}
+
+/* 마우스를 올렸을 때 왼쪽 → 오른쪽으로 밑줄 생성 */
+nav ul li a:hover::after {
+    width: 100%; /* 글자 길이만큼 밑줄 생성 */
 }

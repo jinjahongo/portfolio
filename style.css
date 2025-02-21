@@ -98,6 +98,7 @@ nav ul li a:hover::after {
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2개씩 가로 정렬 */
+    grid-template-rows: repeat(5, auto); /* 5행으로 배치 */
     gap: 20px;
     padding: 20px;
     max-width: 1920px;

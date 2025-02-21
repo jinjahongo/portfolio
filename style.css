@@ -1,36 +1,35 @@
-/* 기본 스타일 설정 */
+/* 기본 스타일 */
 body {
-    font-family: Helvetica, Arial, sans-serif; /* 헬베티카 폰트 적용 */
+    font-family: 'Helvetica', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: white;
     color: black;
+    overflow-x: hidden;
 }
 
-/* 로딩 화면 스타일 */
+/* 로딩 화면 */
 #loading-screen {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: white; /* 흰색 배경 */
-    color: black; /* 검은색 텍스트 */
+    background: white;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 36px;
     font-weight: bold;
-    text-transform: uppercase;
     z-index: 9999;
 }
 
-/* 로딩 숫자 애니메이션 */
+/* 로딩 숫자 */
 #loading-text {
     display: inline-block;
-    transition: transform 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
 }
 
-
-/* 메인 콘텐츠 기본적으로 숨김 */
+/* 메인 콘텐츠 숨김 */
 #main-content {
     opacity: 0;
     transform: translateY(50px);
@@ -43,35 +42,30 @@ body {
     transform: translateY(0);
 }
 
-
-/* 헤더 스타일 (전체 레이아웃) */
+/* 헤더 */
 header {
     display: flex;
-    justify-content: space-between; /* 왼쪽 로고 / 오른쪽 메뉴 */
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
-    max-width: 1880px; /* 1920px 해상도에서 좌우 마진 20px */
+    max-width: 1880px;
     margin: 0 auto;
 }
 
-/* 로고 스타일 (왼쪽 상단) */
+/* 로고 */
 .logo {
-    font-size: 14px; /* 폰트 크기 줄이기 */
+    font-size: 14px;
     font-weight: bold;
-    text-transform: uppercase; /* 영문 대문자로 */
+    text-transform: uppercase;
 }
 
-/* 네비게이션 메뉴 스타일 */
+/* 네비게이션 */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* 메뉴 간격 */
+    gap: 30px;
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    position: relative; /* 밑줄 애니메이션을 위한 상대 위치 설정 */
 }
 
 nav ul li a {
@@ -80,62 +74,57 @@ nav ul li a {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-    position: relative;
-    padding-bottom: 1px; /* 텍스트와 밑줄 간격 1px */
 }
 
-/* 밑줄 기본 설정 (초기에는 보이지 않음) */
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px; /* 밑줄 두께 */
-    background-color: black;
-    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* 느렸다가 - 빨랐다가 - 다시 느려지는 효과 */
+/* 히어로 섹션 */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-/* 마우스를 올렸을 때 왼쪽 → 오른쪽으로 밑줄 생성 */
-nav ul li a:hover::after {
-    width: 100%; /* 글자 길이만큼 밑줄 생성 */
+.hero h1 {
+    font-size: 64px;
+    margin: 0;
 }
 
-/* 포트폴리오 썸네일 그리드 */
+.hero p {
+    font-size: 18px;
+    color: gray;
+}
+
+/* 포트폴리오 섹션 */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2개씩 가로 정렬 */
-    grid-template-rows: repeat(5, auto); /* 5행으로 배치 */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding: 20px;
-    max-width: 1920px;
+    padding: 40px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
-/* 프로젝트 썸네일 */
+/* 프로젝트 박스 */
 .project {
     position: relative;
-    width: 940px;
-    height: 560px;
     overflow: hidden;
     cursor: pointer;
 }
 
-/* 회색 박스 */
-.placeholder {
+/* 이미지 스타일 */
+.project img {
     width: 100%;
-    height: 100%;
-    background-color: #ccc; /* 연한 회색 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: black;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* 호버 시 DIM 효과 */
+.project:hover img {
+    transform: scale(1.05);
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -151,21 +140,15 @@ nav ul li a:hover::after {
     transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* 호버 시 DIM 효과 + 텍스트 활성화 */
+/* 호버 시 효과 */
 .project:hover .overlay {
     background: rgba(0, 0, 0, 0.6);
     opacity: 1;
 }
 
-/* 프로젝트 제목 */
-.overlay h2 {
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* 텍스트 애니메이션 (살짝 올라오면서 등장) */
-.project:hover .overlay h2 {
-    transform: translateY(-5px);
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
 }

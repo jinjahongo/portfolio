@@ -7,6 +7,36 @@ body {
     color: black;
 }
 
+/* 로딩 화면 스타일 */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 9999;
+}
+
+/* 메인 콘텐츠 기본적으로 숨김 */
+#main-content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* 로딩 완료 후 메인 콘텐츠 표시 */
+#main-content.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 /* 헤더 스타일 (전체 레이아웃) */
 header {
     display: flex;

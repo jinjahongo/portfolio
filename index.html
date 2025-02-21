@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JANGJIHOON - Portfolio</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSS 연결 -->
+    <title>STUDIO</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,34 +13,43 @@
         <span id="loading-text">0%</span>
     </div>
 
-    <!-- 메인 콘텐츠 (로딩 후 나타남) -->
+    <!-- 메인 콘텐츠 -->
     <div id="main-content">
         <header>
-            <div class="logo">JANGJIHOON</div>
+            <div class="logo">STUDIO</div>
             <nav>
                 <ul>
-                    <li><a href="#">PROFILE</a></li>
                     <li><a href="#">WORK</a></li>
-                    <li><a href="#">ARCHIVE</a></li>
+                    <li><a href="#">ABOUT</a></li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
 
-        <main class="portfolio-grid">
-            <div class="project"><div class="placeholder">PROJECT 1</div><div class="overlay"><h2>PROJECT 1</h2></div></div>
-            <div class="project"><div class="placeholder">PROJECT 2</div><div class="overlay"><h2>PROJECT 2</h2></div></div>
-            <div class="project"><div class="placeholder">PROJECT 3</div><div class="overlay"><h2>PROJECT 3</h2></div></div>
-            <div class="project"><div class="placeholder">PROJECT 4</div><div class="overlay"><h2>PROJECT 4</h2></div></div>
-            <div class="project"><div class="placeholder">PROJECT 5</div><div class="overlay"><h2>PROJECT 5</h2></div></div>
-            <div class="project"><div class="placeholder">PROJECT 6</div><div class="overlay"><h2>PROJECT 6</h2></div></div>
-            <div class="project"><div class="placeholder">PROJECT 7</div><div class="overlay"><h2>PROJECT 7</h2></div></div>
-            <div class="project"><div class="placeholder">PROJECT 8</div><div class="overlay"><h2>PROJECT 8</h2></div></div>
-            <div class="project"><div class="placeholder">PROJECT 9</div><div class="overlay"><h2>PROJECT 9</h2></div></div>
-            <div class="project"><div class="placeholder">PROJECT 10</div><div class="overlay"><h2>PROJECT 10</h2></div></div>
-        </main>
+        <!-- 히어로 섹션 -->
+        <section class="hero">
+            <h1>CREATIVE STUDIO</h1>
+            <p>Design & Development</p>
+        </section>
+
+        <!-- 포트폴리오 섹션 -->
+        <section class="portfolio-grid">
+            <div class="project">
+                <img src="assets/project1.jpg" alt="Project 1">
+                <div class="overlay"><h2>PROJECT 1</h2></div>
+            </div>
+            <div class="project">
+                <img src="assets/project2.jpg" alt="Project 2">
+                <div class="overlay"><h2>PROJECT 2</h2></div>
+            </div>
+        </section>
+
+        <!-- 푸터 -->
+        <footer>
+            <p>&copy; 2024 STUDIO. All rights reserved.</p>
+        </footer>
     </div>
 
-    <script src="script.js"></script> <!-- JavaScript 연결 -->
+    <script src="script.js"></script>
 </body>
 </html>

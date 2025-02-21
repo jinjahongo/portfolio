@@ -1,6 +1,6 @@
 /* 기본 스타일 설정 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif; /* 헬베티카 폰트 적용 */
     margin: 0;
     padding: 0;
     background-color: white;
@@ -19,7 +19,7 @@ header {
 
 /* 로고 스타일 (왼쪽 상단) */
 .logo {
-    font-size: 24px;
+    font-size: 14px; /* 폰트 크기 줄이기 */
     font-weight: bold;
     text-transform: uppercase; /* 영문 대문자로 */
 }
@@ -40,7 +40,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 14px; /* 폰트 크기 줄이기 */
     font-weight: bold;
     text-transform: uppercase; /* 영문 대문자로 */
 }

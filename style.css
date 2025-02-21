@@ -23,13 +23,15 @@ body {
     z-index: 9999;
 }
 
-/* 로딩 정보 (좌측: JANGJIHOON 2025 / 우측: 로딩 퍼센트) */
+/* 로딩 정보 (좌측: JANGJIHOON / 우측: 로딩 퍼센트) */
 .loading-info {
     width: 100%;
     display: flex;
     justify-content: space-between;
     position: absolute;
     top: 20px; /* 상단에서 20px 아래 */
+    left: 0;
+    right: 0;
     padding: 0 40px; /* 좌우 패딩 */
     font-size: 14px;
 }
@@ -106,19 +108,21 @@ nav ul li a {
     color: gray;
 }
 
-/* 포트폴리오 섹션 */
+/* 포트폴리오 그리드 */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 40px;
-    max-width: 1600px;
+    grid-template-columns: repeat(2, 1fr); /* 2개씩 가로 정렬 */
+    gap: 40px; /* 프로젝트 간 간격 */
+    padding-top: 40px; /* 위쪽 여백 */
+    max-width: 1920px;
     margin: 0 auto;
 }
 
-/* 프로젝트 박스 */
+/* 프로젝트 썸네일 */
 .project {
     position: relative;
+    width: 900px;
+    height: 560px;
     overflow: hidden;
     cursor: pointer;
 }
@@ -135,6 +139,7 @@ nav ul li a {
     transform: scale(1.05);
 }
 
+/* 호버 오버레이 */
 .overlay {
     position: absolute;
     top: 0;
@@ -155,7 +160,6 @@ nav ul li a {
     background: rgba(0, 0, 0, 0.6);
     opacity: 1;
 }
-
 /* 푸터 */
 footer {
     text-align: center;

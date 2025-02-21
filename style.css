@@ -64,3 +64,66 @@ nav ul li a:hover::after {
     width: 100%; /* 글자 길이만큼 밑줄 생성 */
 }
 
+/* 포트폴리오 썸네일 그리드 */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개씩 가로 정렬 */
+    gap: 10px;
+    padding: 20px;
+    max-width: 1880px;
+    margin: 0 auto;
+}
+
+/* 프로젝트 썸네일 기본 스타일 */
+.project {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 호버 시 이미지 확대 효과 */
+.project:hover img {
+    transform: scale(1.05);
+}
+
+/* DIM 효과 + 텍스트 */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* 호버 시 DIM 효과 + 텍스트 활성화 */
+.project:hover .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+/* 프로젝트 제목 */
+.overlay h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 텍스트 애니메이션 (살짝 올라오면서 등장) */
+.project:hover .overlay h2 {
+    transform: translateY(-5px);
+}

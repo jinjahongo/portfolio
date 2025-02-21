@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
 }
 
-/* 로딩 화면 */
+/* 로딩 화면 스타일 */
 #loading-screen {
     position: fixed;
     width: 100%;
@@ -18,14 +18,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 14px; /* 텍스트 크기 14px */
     font-weight: bold;
     z-index: 9999;
 }
 
-/* 로딩 숫자 */
+/* 로딩 정보 (좌측: JANGJIHOON 2025 / 우측: 로딩 퍼센트) */
+.loading-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px; /* 상단에서 20px 아래 */
+    padding: 0 40px; /* 좌우 패딩 */
+    font-size: 14px;
+}
+
+/* 로딩 텍스트 (카운터) */
 #loading-text {
-    display: inline-block;
     transition: opacity 0.1s ease-in-out;
 }
 

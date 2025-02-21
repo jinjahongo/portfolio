@@ -7,29 +7,40 @@
     <link rel="stylesheet" href="style.css"> <!-- CSS 연결 -->
 </head>
 <body>
-    <header>
-        <div class="logo">JANGJIHOON</div>
-        <nav>
-            <ul>
-                <li><a href="#">PROFILE</a></li>
-                <li><a href="#">WORK</a></li>
-                <li><a href="#">ARCHIVE</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="portfolio-grid">
-        <div class="project"><div class="placeholder">PROJECT 1</div><div class="overlay"><h2>PROJECT 1</h2></div></div>
-        <div class="project"><div class="placeholder">PROJECT 2</div><div class="overlay"><h2>PROJECT 2</h2></div></div>
-        <div class="project"><div class="placeholder">PROJECT 3</div><div class="overlay"><h2>PROJECT 3</h2></div></div>
-        <div class="project"><div class="placeholder">PROJECT 4</div><div class="overlay"><h2>PROJECT 4</h2></div></div>
-        <div class="project"><div class="placeholder">PROJECT 5</div><div class="overlay"><h2>PROJECT 5</h2></div></div>
-        <div class="project"><div class="placeholder">PROJECT 6</div><div class="overlay"><h2>PROJECT 6</h2></div></div>
-        <div class="project"><div class="placeholder">PROJECT 7</div><div class="overlay"><h2>PROJECT 7</h2></div></div>
-        <div class="project"><div class="placeholder">PROJECT 8</div><div class="overlay"><h2>PROJECT 8</h2></div></div>
-        <div class="project"><div class="placeholder">PROJECT 9</div><div class="overlay"><h2>PROJECT 9</h2></div></div>
-        <div class="project"><div class="placeholder">PROJECT 10</div><div class="overlay"><h2>PROJECT 10</h2></div></div>
-    </main>
+    <!-- 로딩 화면 -->
+    <div id="loading-screen">
+        <span id="loading-text">0%</span>
+    </div>
+
+    <!-- 메인 콘텐츠 (로딩 후 나타남) -->
+    <div id="main-content">
+        <header>
+            <div class="logo">JANGJIHOON</div>
+            <nav>
+                <ul>
+                    <li><a href="#">PROFILE</a></li>
+                    <li><a href="#">WORK</a></li>
+                    <li><a href="#">ARCHIVE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="portfolio-grid">
+            <div class="project"><div class="placeholder">PROJECT 1</div><div class="overlay"><h2>PROJECT 1</h2></div></div>
+            <div class="project"><div class="placeholder">PROJECT 2</div><div class="overlay"><h2>PROJECT 2</h2></div></div>
+            <div class="project"><div class="placeholder">PROJECT 3</div><div class="overlay"><h2>PROJECT 3</h2></div></div>
+            <div class="project"><div class="placeholder">PROJECT 4</div><div class="overlay"><h2>PROJECT 4</h2></div></div>
+            <div class="project"><div class="placeholder">PROJECT 5</div><div class="overlay"><h2>PROJECT 5</h2></div></div>
+            <div class="project"><div class="placeholder">PROJECT 6</div><div class="overlay"><h2>PROJECT 6</h2></div></div>
+            <div class="project"><div class="placeholder">PROJECT 7</div><div class="overlay"><h2>PROJECT 7</h2></div></div>
+            <div class="project"><div class="placeholder">PROJECT 8</div><div class="overlay"><h2>PROJECT 8</h2></div></div>
+            <div class="project"><div class="placeholder">PROJECT 9</div><div class="overlay"><h2>PROJECT 9</h2></div></div>
+            <div class="project"><div class="placeholder">PROJECT 10</div><div class="overlay"><h2>PROJECT 10</h2></div></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script> <!-- JavaScript 연결 -->
 </body>
 </html>

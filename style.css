@@ -74,26 +74,24 @@ nav ul li a:hover::after {
     margin: 0 auto;
 }
 
-/* 프로젝트 썸네일 기본 스타일 */
+/* 프로젝트 썸네일 (회색 박스) */
 .project {
     position: relative;
     overflow: hidden;
     cursor: pointer;
 }
 
-.project img {
+/* 이미지 대신 회색 박스 */
+.placeholder {
     width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease-in-out;
+    height: 300px; /* 원하는 높이 조정 가능 */
+    background-color: #ccc; /* 연한 회색 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* 호버 시 이미지 확대 효과 */
-.project:hover img {
-    transform: scale(1.05);
-}
-
-/* DIM 효과 + 텍스트 */
+/* 호버 시 DIM 효과 */
 .overlay {
     position: absolute;
     top: 0;

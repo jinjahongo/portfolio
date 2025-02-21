@@ -4,31 +4,26 @@ document.addEventListener("DOMContentLoaded", function () {
     let loadingScreen = document.getElementById("loading-screen");
 
     let count = 0;
-    
+
     function updateLoading() {
-        let increment = Math.floor(Math.random() * 10) + 1; // 1~10 사이 랜덤 증가량
+        let increment = Math.floor(Math.random() * 8) + 1; // 1~8 사이 랜덤 증가량
         count += increment;
 
         if (count > 100) {
             count = 100;
         }
 
-        // 슬롯머신 느낌을 위한 애니메이션
-        loadingText.style.transform = "rotateX(90deg)";
-        setTimeout(() => {
-            loadingText.innerText = count + "%";
-            loadingText.style.transform = "rotateX(0deg)";
-        }, 100); // 짧은 딜레이로 회전 효과
+        loadingText.innerText = count + "%"; // 숫자 변경
 
         if (count < 100) {
-            let delay = Math.random() * 150 + 50; // 랜덤한 속도로 숫자 올라감
+            let delay = Math.random() * 120 + 50; // 랜덤한 속도로 숫자 올라감
             setTimeout(updateLoading, delay);
         } else {
             setTimeout(() => {
-                loadingScreen.style.opacity = "0";
+                loadingScreen.style.opacity = "0"; // 로딩 화면 페이드아웃
                 setTimeout(() => {
                     loadingScreen.style.display = "none";
-                    mainContent.classList.add("loaded"); // 페이지 등장 애니메이션 적용
+                    mainContent.classList.add("loaded"); // 메인 콘텐츠 등장
                 }, 500);
             }, 500);
         }
